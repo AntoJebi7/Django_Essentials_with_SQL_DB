@@ -12,8 +12,7 @@
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    https://github.com/AntoJebi7/web-app-django.git
     ```
 
 2. **Create a Virtual Environment** (Optional but recommended):
