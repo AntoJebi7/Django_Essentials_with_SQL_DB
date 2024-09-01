@@ -70,30 +70,4 @@
     python manage.py migrate
     ```
 
-## Project Structure
 
-A typical Django project consists of the following files and directories:
-
-```plaintext
-myproject/
-│
-├── manage.py
-├── myproject/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│
-├── myapp/
-│   ├── migrations/
-│   │   └── __init__.py
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-│
-└── requirements.txt
