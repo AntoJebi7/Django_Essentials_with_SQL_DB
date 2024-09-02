@@ -1,0 +1,19 @@
+to decrease or partition the html from base.html
+
+create "includes" folder under "templates" folder
+
+create header.html , footer.html in it
+
+cut and paste header codes from base.html to header.html
+cut and paste footer codes from base.html to footer.html
+
+
+now we are going to connect these 2 files to base.html
+
+by using this syntax 
+
+    {% include '/filepath' %}
+
+
+
+

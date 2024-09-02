@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'login',
 ]
 
 MIDDLEWARE = [
@@ -118,8 +119,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[
-    "blog/static/blog/"
+    "blog/static/blog/"   # this means django project recognize there is static files for this project
+    # blog app --> static folder --> blog folder --> css files
 ]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

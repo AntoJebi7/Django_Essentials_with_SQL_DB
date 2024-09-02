@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="{% static 'blog/style.css' %}">
+
+
+{% static %}  - static template tag
+
+to make it work 
+we need to load the library   {% load static %} should be declared at the top
+
+if we click css file via page source,we get an error ,page not found
+because it just build the url ,it doesnt know to configure and connect
+
+so to actually make it work, WE NEED TO TELL THE STATIC FILES ARE LOCATED THERE and django project to recognize
+
+main app --> settings  --> STATIC_URL  -->  STATIC_URL = 'static/' (you can change the static into any string) 
+
+create under STATIC_URL = 'static/'
+
+STATICFILES_DIRS=[
+    "blog/static/blog/"   # this means django project recognize there is static files for this project
+    # blog app --> static folder --> blog folder --> css files
+]
+
+
+This is the way we can link our css file to the html in django as static files

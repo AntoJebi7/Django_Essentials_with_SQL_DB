@@ -1,0 +1,45 @@
+Django templates are typically HTML files with embedded Django Template Language (DTL) tags. These tags are used to 
+dynamically generate content that can vary depending on the context provided by views.
+
+for example ,
+
+base.html contains the code that are repeatable or same format codes
+
+index.html and detail.html both have their same navbar and footer tag
+
+center container is the only thing that is keep on changing
+
+to add dynamic content in the center
+
+add template syntax
+
+
+{%  block content  %}
+    // base.html is ready to accept the dynamic content
+{% endblock  %}
+
+
+now remove the content that are in base.html in index.html
+
+header and footer are removed in index.html
+
+so we need to integrate base html to index html to apply the dynamic content
+
+Index.html:
+
+{% extends 'base.html' %}  now we can access block in base.html to index.html
+at the top
+
+
+to use the block in index.html
+
+{% block content %}
+    //content
+{% endblock %}
+ 
+
+if we save now and run , we get template does not exist error 
+then check the extends path correctly
+
+
+thus layouts dynamically connected !!!
