@@ -1,0 +1,5 @@
+To change values in templates dynamically
+
+blog_title = "Latest Posts dynamic"
+    base_title = "Base title dynamic"
+    return render(request,'index.html' , {'blog_title':blog_title,'base_title':base_title} ) #dict value

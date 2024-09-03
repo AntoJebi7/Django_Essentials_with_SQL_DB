@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# to handle error or no page 
+handler404 = 'myapp.views.custom_page_not_found'
+
+
 urlpatterns = [
     # assign the app's url here to initialize
     # to assign root url to our app , just theave empty string ""
@@ -29,4 +33,7 @@ urlpatterns = [
 
     #when we give admin/ , it will boot admin.site.urls
     path('admin/', admin.site.urls),
+
+    
+
 ]
