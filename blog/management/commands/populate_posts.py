@@ -7,6 +7,9 @@ from django.core.management.base import BaseCommand
 
     # to run with command
 
+
+
+
 class Command(BaseCommand):
     help = "This command inserts post data"
 
