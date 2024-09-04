@@ -4,8 +4,9 @@ from .models import Post
 import logging  #Logger
 from django.urls import reverse  # for reverse and named urls
 # Create your views here.
-blog_title = "Latest Posts dynamic"
+blog_title = "Latest Posts"
 base_title = "Base title dynamic"
+
 
 '''
 posts = [
@@ -28,6 +29,36 @@ def index(request):
 
         #str:post_id from urls.py
         # f for format string 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def detail(request,post_id):  # datatype mismatch may occurs
     #iterator concept - python
     post = next((item for item in posts if item['id']==int(post_id)), None)

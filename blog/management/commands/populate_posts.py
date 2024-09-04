@@ -37,7 +37,8 @@ class Command(BaseCommand):
     "For those seeking thrill and adventure, these travel destinations offer unparalleled experiences that will leave you breathless.",
     "Step-by-step guidance on how to create and grow a profitable online business, from idea generation to marketing strategies.",
     "Examine the complex relationship between social media usage and mental health, and learn how to navigate the digital world mindfully.",
-    "Practical advice and sustainable practices for living a greener life in the city, without sacrificing convenience or comfort."
+    "Practical advice and sustainable practices for living a greener life in the city, without sacrificing convenience or comfort.",
+    "test content"
 ]
 
         img_urls = [

@@ -132,6 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
 STATICFILES_DIRS=[
     "blog/static/blog/"   # this means django project recognize there is static files for this project
     # blog app --> static folder --> blog folder --> css files

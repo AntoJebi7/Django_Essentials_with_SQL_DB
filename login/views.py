@@ -1,6 +1,8 @@
 from django.shortcuts import render # to render html
 from django.http import HttpResponse
 
+
+
 # Create your views here.
 def logindetails(request):
 
@@ -14,4 +16,5 @@ def logindetails(request):
     # 2nd argument is template path as string
 
     return render(request,'login_index.html')
+
 
