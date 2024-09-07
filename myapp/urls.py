@@ -26,13 +26,16 @@ urlpatterns = [
     # to assign root url to our app , just theave empty string ""
     # we need to bring up the urls by including (module)
     # nothing but , it just boot our login urls in the root page (first default page)
-    path("",include("login.urls")),
 
+    
+    path("",include("login.urls")),
+    path("register/",include("registration.urls")),
+     path("otp/",include("otp.urls")),
     #works based on the same above concept 
     path("blog/",include("blog.urls")),
-
     #when we give admin/ , it will boot admin.site.urls
     path('admin/', admin.site.urls),
+    
 
     
 

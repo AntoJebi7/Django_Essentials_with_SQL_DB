@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-qxuquencq$mgknekj6^q(ly08-o$-$0rkp-m0k&m41)4&inzdv
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False   # handler404 will cause error if it set true
+DEBUG = True   # handler404 will cause error if it set true
 # but if we set debug = false, CommandError: You must set 
 # settings.ALLOWED_HOSTS if DEBUG is False.
 
@@ -32,7 +32,7 @@ DEBUG = False   # handler404 will cause error if it set true
 ALLOWED_HOSTS = [
     # we are asked to give our ip but for now we just give localhost
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
 
 ]
 
@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'login',
+    'registration',
+    'otp',
 ]
 
 MIDDLEWARE = [
@@ -133,9 +135,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    # this means django project recognize there is static files for this project
 
-STATICFILES_DIRS=[
-    "blog/static/blog/"   # this means django project recognize there is static files for this project
+    "/blog/static/blog/",
+    "/login/static/login/",
+    "/registration/static/registration/",
+
+        # this means django project recognize there is static files for this project
     # blog app --> static folder --> blog folder --> css files
 ]
 

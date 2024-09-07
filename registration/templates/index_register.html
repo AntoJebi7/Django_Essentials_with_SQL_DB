@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'registration/register_style.css' %}">
+    <title>Register Now</title>
+    
+</head>
+<body>
+    <div class="registration-container">
+        <img src="{% static 'registration/logo.png' %}" alt="Django Logo" class="django-logo">
+        <h1>Lets get started , Register now !</h1>
+        <form class="form-grid">
+            <!-- Full Name -->
+            <input type="text" placeholder="Full Name" required>
+            
+            <!-- Registration Number -->
+            <input type="text" placeholder="Roll No" required>
+
+            <!-- Age -->
+            <input type="email" placeholder="Email" required class="full-width">
+            
+            <input type="text" placeholder="Year" required>
+            
+            <!-- Email Address -->
+            
+            <input type="number" placeholder="Age" required>
+            <!-- Password -->
+            <input type="password" placeholder="Password" required>
+            
+            <!-- Confirm Password -->
+            <input type="password" placeholder="Confirm Password" required>
+            <input type="text" placeholder="Set Pin"  name="pincode" maxlength="4"  pattern="^0[1-9]|[1-9]\d$" required/>
+
+            <!-- Department (full width) -->
+            <select name="department" required class="full-width">
+                <option value="" disabled selected>Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Chemical Engineering">Electronics Engineering</option>
+            </select>
+
+            <!-- Submit Button (full width) -->
+            <input type="submit" value="Register" class="full-width btnn">
+        </form>
+        <p>Already have an account? <a href="/">Login here</a></p>
+    </div>
+</body>
+</html>
+

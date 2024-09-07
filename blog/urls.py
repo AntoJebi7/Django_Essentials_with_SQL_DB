@@ -1,6 +1,4 @@
 from django.urls import path
-
-
 from . import views
 
 app_name = 'blog'   # it means the urls are in the app name of 'blog'
@@ -11,7 +9,7 @@ urlpatterns = [
 
 
   # dynamic urls    number type and string type
-  path("post/<str:post_id>/", views.detail, name="detail"),
+  path("post/<str:slug>/", views.detail, name="detail"),
 
 
     #redirected scenario comes here         
@@ -21,10 +19,7 @@ urlpatterns = [
 
     # redirected from this old url
   path("old_url", views.old_url_redirect, name="old_url"),
-  
-
-  
-
+  path("contact", views.contact_view, name="contact"),
   
 
 ]

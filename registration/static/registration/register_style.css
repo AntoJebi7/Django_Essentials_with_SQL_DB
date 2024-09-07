@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #FFE5CF;
+    font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.registration-container {
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+}
+
+.registration-container h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 20px;
+}
+
+.form-grid .full-width {
+    grid-column: span 1;
+    
+}
+
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container input[type="password"],
+.registration-container input[type="number"],
+.registration-container select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #d1d1d6;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    color: #333;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.registration-container input[type="text"]:focus,
+.registration-container input[type="email"]:focus,
+.registration-container input[type="password"]:focus,
+.registration-container input[type="number"]:focus,
+.registration-container select:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+    background-color: #fff;
+}
+
+.registration-container input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.registration-container input[type="submit"]:hover {
+    background-color: darkmagenta;
+}
+
+.registration-container input[type="submit"]:active {
+    background-color: #003e99;
+}
+
+.registration-container p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.registration-container p a {
+    color: #007aff;
+    text-decoration: none;
+}
+
+.registration-container p a:hover {
+    text-decoration: underline;
+}
+
+.registration-container .django-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-container {
+        padding: 30px;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .registration-container h1 {
+        font-size: 1.5em;
+    }
+
+    .registration-container input[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+.registration-container input[type="submit"] {
+grid-column: 1 / -1; 
+width: 50%;
+justify-self: center; 
+}
