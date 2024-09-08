@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  # or 'bootstrap5', 'uni_form', etc.
 
 
 # Application definition
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
     'login',
     'registration',
     'otp',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -97,6 +99,9 @@ DATABASES = {  #connect our mysql db
         'PORT':'3306' #default port
     }
 }
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+]
 
 
 # Password validation

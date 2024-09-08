@@ -19,7 +19,7 @@ urlpatterns = [
 
 
     # we can render or return the html for our login page instead of http response
-    path("", views.logindetails ,name ="logindetails")
+    path("", views.user_login ,name ="logindetails")
 
 
 

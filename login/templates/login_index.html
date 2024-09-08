@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
-    
-
-    <link rel="stylesheet" href="{% static 'login/login.css' %}">  <!--#static file url build-->
+    <link rel="stylesheet" href="{% static 'login/login.css' %}">
     <title>Django Login App</title>
-    
 </head>
 <body>
     <div class="login-container">
         <img src="{% static 'login/logo.png' %}" alt="Django Logo" class="django-logo">
         <h1>Login</h1>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p }}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Submit">
         </form>
         <p>Forgot your password? <a href="#">Click here</a></p>
         <p>Create new Account <a href="register/">Register Now</a></p>
-        <p>Login Later ? <a href="blog/">Get Started</a></p>
+        <p>Login Later? <a href="blog/">Get Started</a></p>
     </div>
 </body>
 </html>
