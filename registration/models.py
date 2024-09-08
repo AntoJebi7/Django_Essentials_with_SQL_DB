@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
-from django.contrib.auth.hashers import make_password, check_password
+import re
 
 class Registration(models.Model):
     YEAR_CHOICES = [
@@ -17,7 +17,6 @@ class Registration(models.Model):
         ('ce', 'Civil Engineering'),
         ('bt', 'Biotechnology'),
         ('che', 'Chemical Engineering'),
-        # Add more departments as needed
     ]
 
     username = models.CharField(max_length=100)
@@ -25,27 +24,26 @@ class Registration(models.Model):
     email = models.EmailField(unique=True)
     year = models.CharField(max_length=10, choices=YEAR_CHOICES)
     age = models.PositiveIntegerField()
-    password = models.CharField(max_length=128)  # Increased length for hashed passwords
-    pincode = models.CharField(max_length=6)  # Adjusted for general cases
-
+    password = models.CharField(max_length=128)  # Store plain text passwords
+    pin = models.CharField(max_length=6)  # Adjusted for general cases
     department = models.CharField(max_length=20, choices=DEPARTMENT_CHOICES)
 
     def __str__(self):
         return self.username
 
-    def set_password(self, raw_password):
-        self.password = make_password(raw_password)
-
-    def check_password(self, raw_password):
-        return check_password(raw_password, self.password)
-
     def clean(self):
         super().clean()
-        if self.age <= 0:
-            raise ValidationError('Age must be a positive number')
-        # Add any other validations as needed
+
+        # Validate age
+        if self.age <= 0 or self.age > 100:
+            raise ValidationError('Age must be between 1 and 100')
+
+        # Validate pin code (exactly 6 digits)
+        if not re.match(r'^\d{6}$', self.pin):
+            raise ValidationError('Pin must be a 6-digit number')
 
     class Meta:
         ordering = ['username']
         verbose_name = 'Registration'
         verbose_name_plural = 'Registrations'
+        unique_together = ('roll_no', 'year')  # Optional: Unique roll_no-year combination

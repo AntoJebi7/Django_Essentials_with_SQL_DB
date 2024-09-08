@@ -12,3 +12,4 @@ def register(request):
         form = RegistrationForm()
 
     return render(request, 'index_register.html', {'form': form})
+

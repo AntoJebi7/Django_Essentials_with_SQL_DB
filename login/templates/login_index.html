@@ -18,6 +18,14 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Submit">
         </form>
+        {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li style="color:red ! important">{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
         <p>Forgot your password? <a href="#">Click here</a></p>
         <p>Create new Account <a href="register/">Register Now</a></p>
         <p>Login Later? <a href="blog/">Get Started</a></p>
