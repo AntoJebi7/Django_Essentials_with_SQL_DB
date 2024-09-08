@@ -12,7 +12,7 @@
 
 1. **Clone the Repository**:
     ```bash
-    https://github.com/AntoJebi7/Django_Essentials_with_MYSQL_DB.git
+    https://github.com/AntoJebi7/Django_Essentials_with_SQL_DB.git
     ```
 
 2. **Create a Virtual Environment** (Optional but recommended):
