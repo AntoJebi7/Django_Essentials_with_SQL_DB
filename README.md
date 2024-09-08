@@ -85,7 +85,6 @@ This project demonstrates a user authentication system in Django, including regi
 6. [Password Hashing](#password-hashing)
 7. [Django Commands for Migration](#django-commands-for-migration)
 8. [Important Topics](#important-topics)
-9. [License](#license)
 
 ## Introduction
 
