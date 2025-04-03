@@ -3,7 +3,7 @@
 ## Project Setup
 
 ### Prerequisites
-- Python (version 3.7 or higher)
+- Python (version 3.7 or higher version)
 - Django (version 3.x or higher)
 - pip (Python package installer)
 - Virtual environment tool (optional but recommended)
